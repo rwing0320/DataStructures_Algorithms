@@ -1,13 +1,19 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 class Program {
 
   public static void Main (string[] args) {
     Console.WriteLine ("Hello World");
 
-    string[] nemo = {"nemo"};
+    string[] nemo = {"nemo", "Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6"};
 
-    FindNemo(nemo);
+    string[] nemo2 = new string[10];
+
+    nemo2 = nemo2.Select(i => "nemo").ToArray();
+
+    FindNemo(nemo2);
 
   }
 
