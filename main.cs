@@ -18,6 +18,8 @@ class Program {
 
     int[] boxesInt = {1,2,3,4,5};
     LogArrayPairs(boxesInt);
+
+
   }
 
   //Example for 0(1) --> Constant Time (Flat Line)
@@ -107,6 +109,77 @@ class Program {
 
   }
 
+  //Factorial Time - Oh No: 0(n!)
+  //Nested loop for every input we have
+  public static void NFacRuntimeFunc(int n){
+    for(int i = 0; i < n; i++){
+      NFacRuntimeFunc(n - 1);
+    }
+  
+  }
 
 
-}
+  //Space Complexity - NEW TOPIC - Example 1
+  //Dont care about input (how big it is)
+  //B0 0(1)
+  public static void Boooooo(string[] n){
+    for(int i = 0; i < n.Length; i++){ //0(1) as we are assigning a variable
+      Console.WriteLine("booooo");
+    }
+  }
+
+  //Space Complexity - Example 2
+  //Big 0 = 0(n)
+  public static string[] ArrayOfHiNTimes(string[] n){
+    string[] hiArray = new string[n.Length]; //0(n) - for new data structure
+
+    for(int i = 0; i < n.Length;i++){
+        hiArray[i] = "hi"; // 0(n) filling the array data strucutre with a new value depending on how long the array is
+    }
+
+    return hiArray;
+  }
+
+
+  //Example - Twitter Problem
+
+  // //Find 1st tweet, find Nth....
+  // string[] array = ["hi", "my", "teddy"];
+  // array[0] = Newest; //0(1)
+  // array[array.Length - 1]; //0(1)
+
+  // //Therefore Big 0 would be 0(1)
+
+
+
+//   //Example - Twitter Problem 2
+
+//   //Just like first but compare dates as well
+//   //Compare each tweet with other tweets dates
+    //Nested Loops
+//    var tweets = new {
+//      {
+//       name = "hi",
+//       date = 2012
+//      },
+//      {
+//       name = "my",
+//       date = 2014
+//      },
+//      {
+//       name = "teddy",
+//       date = 2018
+//      }
+//     };
+    
+//     //Therefore Big 0 would be 0(n^2)
+// }
+
+//Example 3
+//What is the Big 0
+//("hellothisisanexamplestring").Length
+
+//Answer: Depends on which langauge
+//Need to know how the method works on the string
+//JS = 0(1)
+//C# = 0(1)
